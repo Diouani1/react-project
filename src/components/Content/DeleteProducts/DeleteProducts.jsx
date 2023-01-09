@@ -2,7 +2,6 @@ import "./deleteproducts.css";
 import { Button } from "reactstrap";
 import { DataCenter } from "../../../DataFile";
 import { useContext } from "react";
-
 const DeleteProducts = () => {
   const { products, setProducts } = useContext(DataCenter);
 

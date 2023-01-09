@@ -2,8 +2,12 @@ import "./addproducts.css";
 import { useContext, useRef } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { DataCenter } from "../../../DataFile";
+import {UserDate} from "../../../DateUser"
+
 
 const AddProducts = () => {
+  const {navigate}=useContext(UserDate)
+
   const { products, setProducts } = useContext(DataCenter);
   const productName = useRef();
   const productPrice = useRef();
@@ -13,6 +17,7 @@ const productSize = useRef()
       ...products,
       { name: productName.current.value, size: productSize.current.value, price: productPrice.current.value },
     ]);
+    navigate("/")
   }
 
   return (
