@@ -1,5 +1,4 @@
 import "./deleteproducts.css";
-import { Container, Row, Col } from "react-bootstrap";
 import { Button } from "reactstrap";
 import { DataCenter } from "../../../DataFile";
 import { useContext } from "react";
@@ -15,22 +14,22 @@ const DeleteProducts = () => {
 
   return (
     <div className="deletproducts">
-      <Container style={{ padding: "1rem 0rem"}} >
-        <Row xs="auto" style={{ margin:"auto" }}>
+      
+       
           {products &&
             products.map((item, index) => (
-              <Col style={{ padding: "0.3rem", border:"1px" }} key={index}>
-                <Button
+              
+                <Button key={index}
                   className="button"
                   color="primary"
                   onClick={() => handelerDeleteProduct(item)}
                 >
-                  <h6>{item.name}</h6> <span>{item.price} </span>
+                  <h6>{item.name}</h6> <span>{item.size} </span>
                 </Button>
-              </Col>
+             
             ))}
-        </Row>
-      </Container>
+        
+     
      </div>
   );
 };
