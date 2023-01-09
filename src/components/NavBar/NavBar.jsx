@@ -36,7 +36,7 @@ const NavBar = () => {
     <div className="navbar">
       <Navbar
         expand={false}
-        className="p-2 mb-1 bg-secondary bg-gradient  "
+        className="p-2 mb-1 bg-secondary bg-info  "
         style={{ width: "100%", margin: "0" }}
       >
         <Container fluid>
@@ -45,12 +45,13 @@ const NavBar = () => {
               Cashier Name: <span> {cashierName} </span>
             </h6>
             <h6>
-              Cash Box Number: <span> {cashierBox} </span>
+              Cash Box: <span> {cashierBox} </span>
             </h6>
           </div>
           <Navbar.Toggle
             aria-controls={`offcanvasNavbar-expand-false`}
             onClick={toggleOffOn}
+            style={{color:"black", backgroundColor:"white"}}
           />
 
           <Navbar.Offcanvas
@@ -58,8 +59,10 @@ const NavBar = () => {
             aria-labelledby={`offcanvasNavbarLabel-expand-false`}
             placement="end"
             show={onOff}
+            onHide={toggleOffOn}
+            style={{backgroundColor:"black", color:"white"}}
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header  closeButton closeVariant="white">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
                 Menu
               </Offcanvas.Title>
