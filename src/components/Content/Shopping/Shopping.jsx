@@ -45,7 +45,21 @@ const Shoping = () => {
     }
   });
 }
-  
+function DeletItem  (e) {
+  confirmAlert({
+    title: 'Confirm to delete Item',
+    message: 'Are you sure to do this.',
+    buttons: [
+      {
+        label: 'Yes',
+        onClick: () => handelDelete(e)
+      },
+      {
+        label: 'No',
+      }
+    ]
+  });
+};
   
   return (
     <Container style={{ padding:"1rem"}} fluid>
@@ -57,6 +71,7 @@ const Shoping = () => {
             
                 <Button className='shoppingButton'
                   color="primary"
+                  key={index}
                   onClick={() => handelSum(item)}
                   >
                 
@@ -81,7 +96,7 @@ const Shoping = () => {
                 </thead>
                 <tbody>
                   {sum.map((item, index) => (
-                    <tr key={index}  onClick={handelDelete} style={{ cursor:"pointer" }} name={index}>
+                    <tr key={index}  onClick={DeletItem} style={{ cursor:"pointer" }} name={index}>
                       <th scope="row">{index + 1}</th>
     
                       <td >{item.name}</td>

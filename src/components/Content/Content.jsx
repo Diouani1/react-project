@@ -12,7 +12,7 @@ const Content = () => {
   return (
     <div>
       <Routes>
-        <Route>
+        
           <Route path="/" element={<Shoping />} />
           <Route path="erned" element={<Erned />} />
           <Route path="incoming" element={<Incoming />} />
@@ -24,7 +24,7 @@ const Content = () => {
             <Route path="change" element={<Change />} />
           </Route>
           <Route path="*" element={<Shoping />} />
-        </Route>
+        
       </Routes>
     </div>
   );

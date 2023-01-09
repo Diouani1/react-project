@@ -19,3 +19,6 @@
 
     color: red;
 }
+.change button{
+    min-width: 150px;
+}
