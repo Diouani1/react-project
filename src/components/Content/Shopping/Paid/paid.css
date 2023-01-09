@@ -1,0 +1,22 @@
+.paid{
+    padding-top: 100px;
+min-height: 100vh;
+
+
+
+}
+.paid button{
+    padding: 0;
+}
+.paid a{
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    
+
+}
+
+

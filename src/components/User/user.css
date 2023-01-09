@@ -1,0 +1,12 @@
+.user{
+   max-width:  400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    
+    
+}
+.user button{
+    width: 150px;
+}
