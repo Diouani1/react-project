@@ -1,9 +1,6 @@
 .deletproducts{
-    width: 80%;
+    width: 90%;
     min-height: 60vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
     margin: 100px auto;
     color: white;
     background-color: black;
@@ -12,4 +9,20 @@
 .deletproducts button{
     min-width: 150px;
     margin: 3px;
+}
+
+
+.confirmdelete{
+    width: 60vw;
+    color: white;
+    background-color: black;
+    padding: 1.5rem;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+.confirmdelete span{
+    color: red;
+}
+.confirmdelete button{
+    margin: 1rem;
 }

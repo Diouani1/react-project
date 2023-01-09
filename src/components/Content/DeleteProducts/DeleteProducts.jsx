@@ -1,4 +1,8 @@
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
 import "./deleteproducts.css";
+import { confirmAlert } from 'react-confirm-alert';
+
 import { Button } from "reactstrap";
 import { DataCenter } from "../../../DataFile";
 import { useContext } from "react";
@@ -15,6 +19,28 @@ const DeleteProducts = () => {
 
     setProducts(restProducts);
   }
+  const confirmDelete = (item) => { 
+
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return (
+          <div className='confirmdelete'>
+          <h1>Are you sure ?</h1>
+          <p>You want to delete <span>{item.name} / {item.size}</span> ?</p>
+          <Button onClick={onClose}>Cancel</Button>
+          <Button
+            onClick={() => {
+              handelerDeleteProduct(item);
+              onClose();
+            }}
+            >
+            Yes, Delete them !
+          </Button>
+        </div>
+      );
+    }
+  });
+}
 
   return (
     <div className="deletproducts">
@@ -24,7 +50,7 @@ const DeleteProducts = () => {
             key={index}
             className="button"
             color="primary"
-            onClick={() => handelerDeleteProduct(item)}
+            onClick={() => confirmDelete(item)}
           >
             <h6>{item.name}</h6> <span>{item.size} </span>
           </Button>

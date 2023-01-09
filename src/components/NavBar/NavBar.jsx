@@ -5,6 +5,7 @@ import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { UserDate } from "../../DateUser";
 
 const NavBar = () => {
+  const [onOff, setOnOff] = useState(false);
   const { navigate } = useContext(UserDate);
   const {
     setSum,
@@ -14,13 +15,11 @@ const NavBar = () => {
     setSumOfPaid,
     setSumOfPrice,
   } = useContext(DataCenter);
-  const [collapsed, setCollapsed] = useState(true);
-
-  const toggleNavbar = () => setCollapsed(!collapsed);
   const cashierName = counter[0];
-
   const cashierBox = counter[1];
-
+  function toggleOffOn() {
+    setOnOff(!onOff);
+  }
   function handleLogOut() {
     localStorage.removeItem("user");
     localStorage.removeItem("price");
@@ -35,36 +34,10 @@ const NavBar = () => {
   }
   return (
     <div className="navbar">
-      {/* <NavLink to="/">
-        <Button color="danger" onClick={() => setSum([])}>
-          Shoping List
-        </Button>
-      </NavLink>
-
-      <NavLink to="erned">
-        <Button color="primary">How mach Erned</Button>
-      </NavLink>
-
-      <NavLink to="incoming">
-        <Button color="success">How much Incoming</Button>
-      </NavLink>
-
-      <NavLink to="outcoming">
-        <Button color="info">How much Outcoming</Button>
-      </NavLink>
-
-      <NavLink to="addproducts">
-        <Button color="warning">Add new Products</Button>
-      </NavLink>
-      <NavLink to="totalcashbox">
-        <Button color="danger">Delete product from System</Button>
-      </NavLink> */}
-
       <Navbar
         expand={false}
-        className="p-2 mb-1 bg-secondary bg-gradient text-white "
-        style={{ width: "100%", margin:"0" }}
-        variant="secondary"
+        className="p-2 mb-1 bg-secondary bg-gradient  "
+        style={{ width: "100%", margin: "0" }}
       >
         <Container fluid>
           <div className="userinfo">
@@ -75,11 +48,16 @@ const NavBar = () => {
               Cash Box Number: <span> {cashierBox} </span>
             </h6>
           </div>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+          <Navbar.Toggle
+            aria-controls={`offcanvasNavbar-expand-false`}
+            onClick={toggleOffOn}
+          />
+
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-false`}
             aria-labelledby={`offcanvasNavbarLabel-expand-false`}
             placement="end"
+            show={onOff}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
@@ -94,34 +72,56 @@ const NavBar = () => {
                     onClick={() => {
                       setSum([]);
                       navigate("/");
+                      toggleOffOn();
                     }}
                   >
                     Shoping List
                   </Button>
 
-                  <Button variant="primary" onClick={() => navigate("erned")}>
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      navigate("erned");
+                      toggleOffOn();
+                    }}
+                  >
                     How mach Erned
                   </Button>
 
                   <Button
                     variant="success"
-                    onClick={() => navigate("incoming")}
+                    onClick={() => {
+                      navigate("incoming");
+                      toggleOffOn();
+                    }}
                   >
                     How much Incoming
                   </Button>
 
-                  <Button variant="info" onClick={() => navigate("outcoming")}>
+                  <Button
+                    variant="info"
+                    onClick={() => {
+                      navigate("outcoming");
+                      toggleOffOn();
+                    }}
+                  >
                     How much Outcoming
                   </Button>
                   <Button
                     variant="warning"
-                    onClick={() => navigate("addproducts")}
+                    onClick={() => {
+                      navigate("addproducts");
+                      toggleOffOn();
+                    }}
                   >
                     Add new Products
                   </Button>
                   <Button
                     variant="danger"
-                    onClick={() => navigate("totalcashbox")}
+                    onClick={() => {
+                      navigate("totalcashbox");
+                      toggleOffOn();
+                    }}
                   >
                     Delete product from System
                   </Button>

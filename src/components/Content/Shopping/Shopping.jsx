@@ -1,7 +1,7 @@
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import "./shopping.css"
 import  { useContext } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col} from "react-bootstrap";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import { DataCenter } from "../../../DataFile";
 import { confirmAlert } from 'react-confirm-alert';
@@ -74,7 +74,6 @@ function DeletItem  (e) {
                   key={index}
                   onClick={() => handelSum(item)}
                   >
-                
                   <h6>{item.name}</h6><span>{item.size}</span>  <br /><span>{item.price}  Euros</span>
                 </Button>
               
