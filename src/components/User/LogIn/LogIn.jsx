@@ -3,6 +3,7 @@ import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { useContext, useRef } from "react";
 import { DataCenter } from "../../../DataFile";
 import { UserDate } from "../../../DateUser";
+import bcrypt from "bcryptjs";
 
 const LogIn = () => {
   const { setCounter } = useContext(DataCenter);
@@ -11,10 +12,11 @@ const LogIn = () => {
   const userName = useRef();
   const password = useRef();
   const cashBox = useRef();
-  function logInHandeler(e) {
+  async function logInHandeler(e) {
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem(userName.current.value));
-    if (user.password === password.current.value) {
+    const isMatch = await bcrypt.compare(password.current.value, user.password);
+    if (isMatch) {
       setCounter([userName.current.value, cashBox.current.value]);
     } else {
       setError("Invalid Username or Password");

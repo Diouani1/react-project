@@ -7,6 +7,8 @@ const DateUser = ({ children }) => {
   const userName = useRef("");
   const email = useRef();
   const password = useRef();
+  const [hash, setHash] = useState('');
+
   const navigate = useNavigate();
   const [error, setError] = useState();
   const [state, dispatch] = useReducer(reducer, {});
@@ -24,7 +26,7 @@ const DateUser = ({ children }) => {
         return {
           username: userName.current.value,
           email: email.current.value,
-          password: password.current.value,
+          password: hash,
         };
       }
     } else {
@@ -41,7 +43,7 @@ const DateUser = ({ children }) => {
 
   return (
     <UserDate.Provider
-      value={{ userName, email, password, state, dispatch, error, setError, navigate }}
+      value={{ userName, email, password, state, dispatch, error, setError, navigate , hash, setHash }}
     >
       {children}
     </UserDate.Provider>
