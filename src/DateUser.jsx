@@ -9,7 +9,7 @@ const DateUser = ({ children }) => {
   const password = useRef();
   const [hash, setHash] = useState('');
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [error, setError] = useState();
   const [state, dispatch] = useReducer(reducer, {});
 
@@ -37,7 +37,7 @@ const DateUser = ({ children }) => {
     if (!JSON.parse(localStorage.getItem(userName.current.value))) {
       localStorage.setItem(userName.current.value, JSON.stringify(state));
       setError(null)
-      navigate("login");
+      navigate("login")
     }
   }, [state]);
 
