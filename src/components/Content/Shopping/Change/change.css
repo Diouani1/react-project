@@ -22,3 +22,23 @@
 .change button{
     min-width: 150px;
 }
+
+@media (max-width:729px) {
+    .change{
+        font-size: 2rem;
+    }
+
+    
+}
+@media (max-width:529px) {
+    .change{
+        font-size: 1rem;
+        min-height: 2rem;
+        padding: 0.5rem ;
+    }
+    .change h2{
+        font-size: 1rem;
+    }
+    
+    
+}

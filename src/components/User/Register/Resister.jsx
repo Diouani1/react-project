@@ -4,7 +4,7 @@ import { UserDate } from "../../../DateUser";
 import { useContext } from "react";
 import bcrypt from 'bcryptjs';
 const Register = () => {
-  const { userName, email, password,  dispatch, error, setHash, hash} =
+  const { userName, email, password,  dispatch, error, setHash} =
     useContext(UserDate);
 
  async function handelSubmit(e) {
@@ -13,13 +13,6 @@ const Register = () => {
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(password.current.value, salt);
     setHash(hashedPassword);
-
-
-
-
-
-
-
 
     dispatch({ type: "register" });
   }
