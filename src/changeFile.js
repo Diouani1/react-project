@@ -25,41 +25,41 @@
         let num5 = num4 % 2;
         if (i === 0) {
           if (num >= 50) {
-            changBox.push(`"50 Euro" : ${parseInt(num/50)}` );
+            changBox.push(`"50 💶" x ${parseInt(num/50)}` );
           }
           if (num1 >= 20) {
-            changBox.push( `"20 Euro" : ${parseInt(num1 / 20)}`   );
+            changBox.push( `"20 💶" x ${parseInt(num1 / 20)}`   );
           }
           if (num2 >= 10) {
-            changBox.push(`"10 Euro" : ${parseInt(num2 / 10)}`  );
+            changBox.push(`"10 💶" x ${parseInt(num2 / 10)}`  );
           }
           if (num3 >= 5) {
-            changBox.push(`"5 Euro" : ${parseInt(num3 / 5)} `);
+            changBox.push(`"5 💶" x ${parseInt(num3 / 5)} `);
           }
           if (num4 >= 2) {
-            changBox.push(`"2 Euro" : ${ parseInt(num4 / 2) }`);
+            changBox.push(`"2 Euro" x ${ parseInt(num4 / 2) }`);
           }
           if (num5 >= 1) {
-            changBox.push(`"1 Euro" : ${ num5 }`);
+            changBox.push(`"1 Euro" x ${ num5 }`);
           }
         } else {
           if (num >= 50) {
-            changBox.push(`"50 Cent" : ${ parseInt(num / 50) }`);
+            changBox.push(`"50 Cent" x ${ parseInt(num / 50) }`);
           }
           if (num1 >= 20) {
-            changBox.push(`"20 Cent" : ${ parseInt(num1 / 20) }`);
+            changBox.push(`"20 Cent" x ${ parseInt(num1 / 20) }`);
           }
           if (num2 >= 10) {
-            changBox.push(`"10 Cent" : ${  parseInt(num2 / 10) }`);
+            changBox.push(`"10 Cent" x ${  parseInt(num2 / 10) }`);
           }
           if (num3 >= 5) {
-            changBox.push(`"5 Cent" : ${  parseInt(num3 / 5) }`);
+            changBox.push(`"5 Cent" x ${  parseInt(num3 / 5) }`);
           }
           if (num4 >= 2) {
-            changBox.push(`"2 Cent" : ${ parseInt(num4 / 2) }`);
+            changBox.push(`"2 Cent" x ${ parseInt(num4 / 2) }`);
           }
           if (num5 >= 1) {
-            changBox.push(`"1 Cent" : ${  num5 }`);
+            changBox.push(`"1 Cent" x ${  num5 }`);
           }
         }
       }

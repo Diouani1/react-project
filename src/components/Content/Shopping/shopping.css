@@ -4,7 +4,6 @@
 
 
 .priceList{
-    
     min-width: 250px;
     max-width: 400px;
     display: flex;
@@ -12,9 +11,13 @@
     
 }
 .priceList table{
+    border-radius: 5px 5px 0 0;
+
     margin-bottom: 0;
 }
 .table{
+    border-radius: 7px 7px 0 0;
+
     max-height: 50vh;
     overflow-y:auto;
     scroll-snap-type: proximity;
