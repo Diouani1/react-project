@@ -13,15 +13,15 @@ root.render(
   breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
   minBreakpoint="xxs"
 >
+<BrowserRouter>
 <DataFile>
 
-<BrowserRouter>
 <DateUser>
   <App />
 </DateUser>
-</BrowserRouter>
 
 </DataFile>
+</BrowserRouter>
 </ThemeProvider>
  
 );
