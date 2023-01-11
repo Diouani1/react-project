@@ -1,9 +1,14 @@
 
+
+
+
+
 .priceList{
-    border: 5px solid;
+    
+    min-width: 250px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-   
     
 }
 .priceList table{
@@ -55,3 +60,14 @@
 .custom-ui button{
     margin: 1rem;
 }
+@media (max-width:729px) {
+    .priceList{
+        font-size: 12px;
+    }
+    .priceList button{
+        font-size: 12px;
+    }
+    .sum{
+    font-size: 1rem;
+    }
+    }
