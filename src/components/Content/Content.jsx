@@ -12,19 +12,17 @@ const Content = () => {
   return (
     <div>
       <Routes>
-        
-          <Route path="/" element={<Shoping />} />
-          <Route path="erned" element={<Erned />} />
-          <Route path="incoming" element={<Incoming />} />
-          <Route path="outcoming" element={<Outcoming />} />
-          <Route path="totalcashbox" element={<DeleteProducts />} />
-          <Route path="addproducts" element={<AddProducts />} />
-          <Route path="paid">
-            <Route index element={<Paid />} />
-            <Route path="change" element={<Change />} />
-          </Route>
-          <Route path="*" element={<Shoping />} />
-        
+        <Route path="/" element={<Shoping />} />
+        <Route path="erned" element={<Erned />} />
+        <Route path="incoming" element={<Incoming />} />
+        <Route path="outcoming" element={<Outcoming />} />
+        <Route path="totalcashbox" element={<DeleteProducts />} />
+        <Route path="addproducts" element={<AddProducts />} />
+        <Route path="paid">
+          <Route index element={<Paid />} />
+          <Route path="change" element={<Change />} />
+        </Route>
+        <Route path="*" element={<Shoping />} />
       </Routes>
     </div>
   );

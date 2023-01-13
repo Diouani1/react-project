@@ -17,8 +17,8 @@ const DataFile = ({ children }) => {
   const [sumOfChange, setSumOfChange] = useState(+outcoming || 0);
   const [outPut, setOutput] = useState("");
   const [paid, setPaid] = useState();
-  const [change, setChange]=useState()
-  const [goBack, setGoBack]=useState(false)
+  const [change, setChange] = useState();
+  const [goBack, setGoBack] = useState(false);
 
   useEffect(() => {
     products.sort((a, b) => a.name.localeCompare(b.name));
@@ -54,12 +54,12 @@ const DataFile = ({ children }) => {
         setSumOfChange,
         outPut,
         setOutput,
-        paid, 
+        paid,
         setPaid,
         change,
-         setChange,
-         goBack,
-         setGoBack
+        setChange,
+        goBack,
+        setGoBack,
       }}
     >
       {children}

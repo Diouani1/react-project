@@ -2,12 +2,12 @@ import "./register.css";
 import { Label, Form, FormGroup, Input, Button } from "reactstrap";
 import { UserDate } from "../../../DateUser";
 import { useContext } from "react";
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs";
 const Register = () => {
-  const { userName, email, password,  dispatch, error, setHash} =
+  const { userName, email, password, dispatch, error, setHash } =
     useContext(UserDate);
 
- async function handelSubmit(e) {
+  async function handelSubmit(e) {
     e.preventDefault();
 
     const salt = await bcrypt.genSalt();

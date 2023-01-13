@@ -19,17 +19,17 @@ const Paid = () => {
     paid,
     setPaid,
     setChange,
-    setGoBack
+    setGoBack,
   } = useContext(DataCenter);
-  const {navigate}=useContext(UserDate)
+  const { navigate } = useContext(UserDate);
   const price = sum.reduce((prev, curr) => prev + +curr.price, 0).toFixed(2);
 
   function cashCounter(price, paid) {
     let change = parseFloat((paid - price).toFixed(2));
     if (change < 0) {
-      setChange("not enough")
-      setOutput(`Customer should pay ${(change * Math.sign(change))} Euro more`);
-      setGoBack(true)
+      setChange("not enough");
+      setOutput(`Customer should pay ${change * Math.sign(change)} Euro more`);
+      setGoBack(true);
     } else {
       setChange(change);
       setSumOfPrice(sumOfPrice + +price);
@@ -69,10 +69,15 @@ const Paid = () => {
         {paid && (
           <Button color="primary" onClick={handelerChange}>
             <NavLink to="change">Submit The Payement</NavLink>
-          </Button> 
+          </Button>
         )}
-          <Button style={{padding:"5px"}} color="secondary" onClick={()=> navigate("/")}>Go Back</Button>
-
+        <Button
+          style={{ padding: "5px" }}
+          color="secondary"
+          onClick={() => navigate("/")}
+        >
+          Go Back
+        </Button>
       </Form>
     </div>
   );

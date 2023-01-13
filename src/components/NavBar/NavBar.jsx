@@ -51,7 +51,7 @@ const NavBar = () => {
           <Navbar.Toggle
             aria-controls={`offcanvasNavbar-expand-false`}
             onClick={toggleOffOn}
-            style={{color:"black", backgroundColor:"white"}}
+            style={{ color: "black", backgroundColor: "white" }}
           />
 
           <Navbar.Offcanvas
@@ -60,9 +60,9 @@ const NavBar = () => {
             placement="end"
             show={onOff}
             onHide={toggleOffOn}
-            style={{backgroundColor:"black", color:"white"}}
+            style={{ backgroundColor: "black", color: "white" }}
           >
-            <Offcanvas.Header  closeButton closeVariant="white">
+            <Offcanvas.Header closeButton closeVariant="white">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
                 Menu
               </Offcanvas.Title>
