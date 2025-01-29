@@ -50,6 +50,7 @@ const AddProducts = () => {
             <option>1 L</option>
             <option>1.5 L</option>
             <option>2 L</option>
+            <option>gr</option>
           </Input>
         </FormGroup>
 
