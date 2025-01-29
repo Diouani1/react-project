@@ -50,7 +50,13 @@ const AddProducts = () => {
             <option>1 L</option>
             <option>1.5 L</option>
             <option>2 L</option>
-            <option>gr</option>
+            <option>100 Gr</option>
+            <option>250 Gr</option>
+            <option>500 Gr</option>
+            <option>1 Kg</option>
+            <option>1,5 Kg</option>
+            <option>2 Kg</option>
+            <option>Stuck</option>
           </Input>
         </FormGroup>
 
