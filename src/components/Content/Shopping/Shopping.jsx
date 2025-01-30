@@ -60,24 +60,7 @@ const Shoping = () => {
   return (
     <Container style={{ padding: "1rem" }} fluid>
       <Row>
-        <Col xs={12} sm={9}>
-          <div className="shoppingList">
-            {products &&
-              products.map((item, index) => (
-                <Button
-                  className="shoppingButton"
-                  color="primary"
-                  key={index}
-                  onClick={() => handelSum(item)}
-                >
-                  <h6>{item.name}</h6>
-                  <span>{item.size}</span> <br />
-                  <span>{item.price} Euros</span>
-                </Button>
-              ))}
-          </div>
-        </Col>
-        <Col>
+      <Col>
           <div className="priceList">
             <div className="table">
               <Table dark striped>
@@ -121,6 +104,24 @@ const Shoping = () => {
             </ButtonGroup>
           </div>
         </Col>
+        <Col xs={12} sm={9}>
+          <div className="shoppingList">
+            {products &&
+              products.map((item, index) => (
+                <Button
+                  className="shoppingButton"
+                  color="primary"
+                  key={index}
+                  onClick={() => handelSum(item)}
+                >
+                  <h6>{item.name}</h6>
+                  <span>{item.size}</span> <br />
+                  <span>{item.price} Euros</span>
+                </Button>
+              ))}
+          </div>
+        </Col>
+       
       </Row>
     </Container>
   );
